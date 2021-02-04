@@ -1,0 +1,33 @@
+<div class="row">
+<div class="card">
+  <div class="col-lg-auto">
+    <div class='card-header'>
+        {{pageTitle}}
+    </div>
+    <div class='card-body'>
+      <img src="{{product.imageUrl}}"
+           class="card-img-top align-content-lg-center"
+           [title]="product.productName"
+           [style.width.px]="100"
+           [style.margin.px]="5"/>
+      <h4 class="card-title">{{product.productName}}</h4>
+
+      <p class="card-text">{{'Code: ' + product.productCode}}</p>
+      <p class="card-text"> <small>{{'Description: ' + product.description}}</small></p>
+      <p class="card-text">Rating: <pm-star [rating]="product.starRating" ></pm-star>
+      </p>
+<!--      <p class="card-text">{{'Rating: ' + product.starRating}}</p>-->
+      <p class="card-text">{{'Price: ' + product.price}}</p>
+      <p class="card-text">{{'Release Date: ' + product.releaseDate}}</p>
+    </div>
+    <div class='card-footer '>
+      <button class='btn btn-outline-secondary'
+              (click)="onBack()"
+              style="width:80px">
+        <i class='fa fa-chevron-left'></i> Back
+      </button>
+    </div>
+    </div>
+</div>
+
+</div>
